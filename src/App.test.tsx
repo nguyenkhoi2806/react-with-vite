@@ -2,14 +2,15 @@ import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { describe, it } from 'vitest';
 
-import { App, WrappedApp } from './App';
+import App from './App';
 
 describe('App', () => {
   it('Renders hello world', () => {
-    // ARRANGE
-    render(<WrappedApp />);
-    // ACT
-    // EXPECT
+    render(
+      <MemoryRouter initialEntries={['/']}>
+        <App />
+      </MemoryRouter>
+    );
     expect(
       screen.getByRole('heading', {
         level: 1,
