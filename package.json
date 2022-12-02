@@ -13,7 +13,7 @@
     "format": "prettier . --write"
   },
   "lint-staged": {
-    "*.(ts|tsx|js)": "eslint --fix ",
+    "*.(ts|tsx|js)": "eslint",
     "*.{js,css,md,html,json}": "prettier --cache --write"
   },
   "dependencies": {
