@@ -9,13 +9,12 @@
     "preview": "vite preview",
     "test": "vitest",
     "prepare": "husky install",
-    "pre-commit": "lint-staged"
+    "lint": "eslint . --fix --max-warnings=0",
+    "format": "prettier . --write"
   },
   "lint-staged": {
-    "**/*.(ts|tsx|js)": [
-      "eslint . --fi"
-    ],
-    "**/*": "prettier --write --ignore-unknown"
+    "*.(ts|tsx|js)": "eslint --fix ",
+    "*.{js,css,md,html,json}": "prettier --cache --write"
   },
   "dependencies": {
     "eslint-plugin-simple-import-sort": "^8.0.0",
