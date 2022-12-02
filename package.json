@@ -14,6 +14,9 @@
   "lint-staged": {
     "src/**/*.(ts|tsx|js)": [
       "eslint . --fix --max-warnings=0"
+    ],
+    "*.(ts|tsx|js)": [
+      "prettier --write ."
     ]
   },
   "dependencies": {
