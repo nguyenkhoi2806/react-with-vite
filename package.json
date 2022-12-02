@@ -13,7 +13,7 @@
     "format": "prettier . --write"
   },
   "lint-staged": {
-    "**/*.{js,jsx}": [
+    "**/*.{ts,tsx,js}": [
       "eslint . --fix",
       "prettier --write ."
     ]
