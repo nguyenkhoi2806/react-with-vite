@@ -7,7 +7,14 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "prepare": "husky install",
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*.(ts|tsx|js)": [
+      "eslint . --fix --max-warnings=0"
+    ]
   },
   "dependencies": {
     "eslint-plugin-simple-import-sort": "^8.0.0",
@@ -32,7 +39,9 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.1",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.2",
     "jsdom": "^20.0.0",
+    "lint-staged": "^13.0.4",
     "prettier": "^2.7.1",
     "typescript": "^4.6.4",
     "vite": "^3.0.7",
