@@ -13,8 +13,10 @@
     "format": "prettier . --write"
   },
   "lint-staged": {
-    "*.(ts|tsx|js)": "eslint",
-    "*.{js,css,md,html,json}": "prettier --cache --write"
+    "**/*.{js,jsx}": [
+      "eslint . --fix",
+      "prettier --write ."
+    ]
   },
   "dependencies": {
     "eslint-plugin-simple-import-sort": "^8.0.0",
