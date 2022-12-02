@@ -12,7 +12,7 @@
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "src/**/*.(ts|tsx|js)": [
+    "**/*.(ts|tsx|js)": [
       "eslint . --fix --max-warnings=0"
     ],
     "**/*": "prettier --write --ignore-unknown"
