@@ -2,13 +2,13 @@ import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { describe, it } from 'vitest';
 
-import App from './App';
+import AppRoute from '..';
 
 describe('App', () => {
   it('Renders hello world', () => {
     render(
       <MemoryRouter initialEntries={['/']}>
-        <App />
+        <AppRoute />
       </MemoryRouter>
     );
     expect(
@@ -20,7 +20,7 @@ describe('App', () => {
   it('Renders not found if invalid path', () => {
     render(
       <MemoryRouter initialEntries={['/this-route-does-not-exist']}>
-        <App />
+        <AppRoute />
       </MemoryRouter>
     );
     expect(

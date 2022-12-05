@@ -34,5 +34,6 @@ module.exports = {
         namedComponents: ['arrow-function'],
       },
     ],
+    'import/extensions': 0,
   },
 };
